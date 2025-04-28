@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="auth-container">
+    <h1>{% block title %}Auth Page{% endblock %}</h1>
+    <div class="auth-content">
+        {% block auth_content %}
+        <!-- Content specific to the auth page will go here -->
+        {% endblock auth_content %}
+    </div>
+</div>
+{% endblock %} 

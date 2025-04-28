@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Milk Production Records</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cattle Name</th>
+            <th>Date</th>
+            <th>Milk Produced (liters)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in milk_production_list %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.cattle.name }}</td>
+            <td>{{ record.date }}</td>
+            <td>{{ record.milk_produced }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
